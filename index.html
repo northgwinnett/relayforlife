@@ -658,7 +658,7 @@
     <h1 class="font_0" style="line-height:0.6em; text-align:center;"><span class="color_23">GIVE</span></h1></div>
     
     
-    <section style="height: 480px;left:0;width:100%;min-width:980px;top:;bottom:;right:;position:;margin-left:0;" data-responsive="true" data-is-screen-width="true" data-col-margin="0" data-row-margin="0" class="strc1" id="comp-jph3rpih"><div style="position:relative;width:calc(100% - 0px);min-width:980px;" id="comp-jph3rpihinlineContent" class="strc1inlineContent"><div style="position:relative;width:100%;left:0;flex: 480;margin-left:0;min-width:980px;top:0;margin-top:0;margin-bottom:0;height:;display:flex;bottom:;right:;" data-content-width="980" data-is-mesh="true" class="mc1" id="comp-jph3rpob"><div style="position:relative;background: white;height:100%;width:100%;" id="comp-jph3rpobcontainer" class="mc1container"><div style="position:relative;left:0;right:0;top:0;bottom:0;width:100%;height:100%" id="comp-jph3rpobinlineContentParent" class="mc1inlineContentParent"><div class="mc1inlineContent" style="width:100%;position:relative;top:0;bottom:0" id="comp-jph3rpobinlineContent"><style id="comp-jph3rpob-mesh-styles">
+    <section style="left:0;width:100%;min-width:980px;top:;bottom:;right:;position:;margin-left:0;" data-responsive="true" data-is-screen-width="true" data-col-margin="0" data-row-margin="0" class="strc1 bid_section" id="comp-jph3rpih"><div style="position:relative;width:calc(100% - 0px);min-width:980px;" id="comp-jph3rpihinlineContent" class="strc1inlineContent"><div style="position:relative;width:100%;left:0;flex: 480;margin-left:0;min-width:980px;top:0;margin-top:0;margin-bottom:0;height:;display:flex;bottom:;right:;" data-content-width="980" data-is-mesh="true" class="mc1" id="comp-jph3rpob"><div style="position:relative;background: white;height:100%;width:100%;" id="comp-jph3rpobcontainer" class="mc1container"><div style="position:relative;left:0;right:0;top:0;bottom:0;width:100%;height:100%" id="comp-jph3rpobinlineContentParent" class="mc1inlineContentParent"><div class="mc1inlineContent" style="width:100%;position:relative;top:0;bottom:0" id="comp-jph3rpobinlineContent"><style id="comp-jph3rpob-mesh-styles">
         
     #comp-jph3rpobinlineContent {
         height: auto;
@@ -797,8 +797,13 @@
     
     
     <div data-packed="true" style="pointer-events: none;" class="txtNew" id="iahud8w0"><h4 style="line-height:1.4em;" class="font_4"><span style="line-height:1.4em;">
-    <span class="color_23">Chrous Concert Parking Auction</span></span></h4>
+        <span class="color_23">Parking Space Auction</span></span></h4>
+        <div style="font-size: 14px; color: #666; font-weight: bold;">
+            <div>1. Select your event</div>
+            <div>2. Bid on a parking spot for that event</div>
+        </div>
     </div>
+
     
     
     <div data-packed="true" style="width: calc(100% - 450px); pointer-events: none;" class="txtNew" id="iahud8w0_0"><p style="line-height:1.4em;" class="font_9"><span style="line-height:1.4em;">
@@ -806,7 +811,49 @@
     
       <table style="width: 100%; margin-top: 20px;">
           <tbody><tr>
-            <td width="50%"><div class="bid_wrapper">
+            <td>
+            <div style="font-size: 14px; color: #666; font-weight: bold;">Events</div>
+            <div id="event_menu">
+                
+                <div class="event_section">Band</div>
+                <a> Nov 14th (7B/8B) @ 6:30 pm</a>
+                <a> Nov 18th (7A/6B) @ 6:30 pm</a>
+
+                <div class="event_section">Orchestra</div>
+                <a>Dec 3rd (7A) @ 5:15 pm</a>
+                <a>Dec 3rd (7B) @ 6:15 pm</a>
+                <a>Dec 3rd (H) @ 7:15 pm</a>
+
+                <a>Dec 5th (6A) @ 5:15 pm</a>
+                <a>Dec 5th (6B) @ 6:15 pm</a>
+                <a>Dec 5th (8) @ 7:15 pm</a>
+
+                <div class="event_section">Guitar</div>
+                <a>Dec 9th (6A) @ 5:15 pm</a>
+                <a> Dec 9th (7A) @ 6:15 pm</a>
+                <a> Dec 9th (8A) @ 8:15 pm</a>
+
+                <a> Dec 10th (6B) @ 5:15 pm</a>
+                <a> Dec 10th (7B) @ 6:15 pm</a>
+                <a> Dec 10th (8B) @ 7:15 pm</a>
+
+                <div class="event_section">Chorus</div>
+                <a> Dec 12th (6B) @ 6:00</a>
+                <a> Dec 12th (6A) @ 7:00 pm</a>
+
+                <a> Dec 16th (7/8 Mix) @ 6:00 pm</a>
+                <a> Dec 16th (7/8 Treble) @ 7:00 pm</a>
+                
+            </div></td>
+            <td width="99%">
+                <div id="bid_welcome">
+                    <h4 class="font_4" style="color:#444; font-size: 24px;">
+                    Please select an event to the left in order to view available parking 
+                    spots for auction.
+                    </h4>
+                </div>
+                <div class="bid_wrapper" style="display: none;">
+
                   <h2><span><span class="color_23">Parking Spot 1</span></span></h2>
                   <div>Current High Bid: <span id="spot1_high_bid" style="font-weight: bold;"></span></div>
                   <div style="margin-top: 20px;"></div>
@@ -823,8 +870,6 @@
                       </tbody></table>
                     </form>
                   </div>
-              </div></td>
-              <td width="50%"><div class="bid_wrapper">
                   <h2><span><span class="color_23">Parking Spot 2</span></span></h2>
                   <div>Current High Bid: <span id="spot2_high_bid" style="font-weight: bold;"></span></div>
                   <div style="margin-top: 20px;"></div>

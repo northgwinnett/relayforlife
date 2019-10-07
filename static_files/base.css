@@ -39,3 +39,37 @@
     padding: 5px;
     font-size: 14px;
 }
+
+.bid_section {
+    height: 880px;
+}
+#event_menu {
+    border: 1px solid #999;
+}
+#event_menu a {
+    display: inline-block;
+    width: 200px;
+    padding: 5px;
+    font-size: 12px;
+    background: #EEE;
+}
+#event_menu a:hover {
+    background: rgb(109, 174, 255);
+}
+#event_menu .event_section {
+    display: inline-block;
+    width: 200px;
+    padding: 5px;
+    font-size: 12px;
+    background: #669;
+    color: #FFF;
+    font-weight: bold;
+}
+
+#bid_welcome {
+    margin: 20px;
+}
+
+td {
+    vertical-align: top !important;
+}
