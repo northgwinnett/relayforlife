@@ -12,6 +12,38 @@ $.get('https://pegues.org/relayforlife/topbid?spot=1', function(result) {
     $('#spot1_high_bid').text(result);
 });
 
+var topbids_xhr;
+
+function show_spots(evt){
+    var target = evt.target;
+    var name = $(target).text();
+    var event_id = $(target).attr('id');
+    $('#spot1_input_event').val(name);
+    $('#spot2_input_event').val(name);
+    $('#spot1_input_event_id').val(event_id);
+    $('#spot2_input_event_id').val(event_id);
+
+    $('#bid_welcome').hide();
+    $('#bid_wrapper').hide();
+    $('#bid_loading').show();
+    $('#event_menu').find('a').removeClass('selected');
+    $(target).addClass('selected');
+
+    if (topbids_xhr && topbids_xhr.abort) {
+        topbids_xhr.abort();
+    }
+    topbids_xhr = $.get('https://pegues.org/relayforlife/topbids?event='+encodeURIComponent(event_id), function(result) {
+        var parts = result.split(':');
+        top_bid[1] = parts[0];
+        top_bid[2] = parts[1];
+        $('#spot1_high_bid').text(top_bid[1]);
+        $('#spot2_high_bid').text(top_bid[2]);
+        $('#bid_loading').hide();
+        $('#bid_wrapper').show();
+    });
+
+}
+
 function spot_submit(spot_num){
     var data = $('#spot'+spot_num+'_form').serialize();
     var arr = $('#spot'+spot_num+'_form').serializeArray();

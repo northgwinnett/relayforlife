@@ -1,15 +1,19 @@
 .bid_label {
-    color: #999;
-    font-weight: bold;
+    color: #444;
     width: 150px;
 }
 
 .bid_wrapper {
-    background: #DDD;
-    border: 1px solid #BBB;
-    border-radius: 10px;
+    background: #abc6e4;
     padding: 10px;
     margin-right: 10px;
+    margin-top: 15px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid #444;
+    position: relative;
+    left: -2px;
+    z-index: 1;
 }
 
 .bid_input {
@@ -44,7 +48,7 @@
     height: 880px;
 }
 #event_menu {
-    border: 1px solid #999;
+    border: 1px solid #444;
 }
 #event_menu a {
     display: inline-block;
@@ -54,17 +58,25 @@
     background: #EEE;
 }
 #event_menu a:hover {
-    background: rgb(109, 174, 255);
+    background: #FFCCAA;
 }
+#event_menu a.selected {
+    background: #abc6e4 !important;
+    color: #000 !important;
+    position: relative;
+    z-index: 3;
+}
+
 #event_menu .event_section {
     display: inline-block;
     width: 200px;
     padding: 5px;
     font-size: 12px;
-    background: #669;
+    background: #6697ce;
     color: #FFF;
     font-weight: bold;
 }
+
 
 #bid_welcome {
     margin: 20px;

@@ -621,24 +621,17 @@
       Welcome to Relay for Life 2019!  
       This year we will be raising money by auctioning off premium parking spaces for events 
       throughout the year.  We have two spaces available, right up front so you would not have 
-      to take a shuttle or walk a long way to get inside... and it's for a great cause!
-  
-      This year's events are:
-      </span></span></p><ul style="margin-left: 20px; font-size: 16px;">
-          <li class="color_20">Chorus Concert</li>
-          <li class="color_20">Band Concert</li>
-          <li class="color_20">Orchistra Concert</li>
-          <li class="color_20">Guitar Concert</li>
-      </ul>
-  
-      
+      to take a shuttle or walk a long way to get inside... and it's for a great cause!    
     <p></p>
     
     <p style="line-height:1.4em; text-align:justify;" class="font_8"><br>
     <span style="line-height:1.4em;"><span class="color_20">​
-      We are currently auctioning off spaces for our <b style="color: black;">Chrous Concert!</b>
-      Please see the spaces and their current bid levels below and make a bid to 
-      help fight cancer!  Don't need a parking space but still want to help?  
+      We are currently auctioning off spaces for several events.  
+      Please see the list below, and click on the event name which you are attending.  
+      The available spaces and their current bid levels will then display for you to make a bid to 
+      help fight cancer!  
+      <br><br>
+      Don't need a parking space but still want to help?  
       No problem, just fill out our donation form!  All donations, either direct or 
       via bidding, will be debited to your child's school account.  
     </span></span></p>
@@ -812,37 +805,37 @@
       <table style="width: 100%; margin-top: 20px;">
           <tbody><tr>
             <td>
-            <div style="font-size: 14px; color: #666; font-weight: bold;">Events</div>
+            <div style="height: 15px; font-size: 14px; color: #666; font-weight: bold;">Events</div>
             <div id="event_menu">
                 
                 <div class="event_section">Band</div>
-                <a> Nov 14th (7B/8B) @ 6:30 pm</a>
-                <a> Nov 18th (7A/6B) @ 6:30 pm</a>
+                <a id="event_1" onclick="show_spots(event)"> Nov 14th (7B/8B) @ 6:30 pm</a>
+                <a id="event_2" onclick="show_spots(event)"> Nov 18th (7A/6B) @ 6:30 pm</a>
 
                 <div class="event_section">Orchestra</div>
-                <a>Dec 3rd (7A) @ 5:15 pm</a>
-                <a>Dec 3rd (7B) @ 6:15 pm</a>
-                <a>Dec 3rd (H) @ 7:15 pm</a>
+                <a id="event_3" onclick="show_spots(event)">Dec 3rd (7A) @ 5:15 pm</a>
+                <a id="event_4" onclick="show_spots(event)">Dec 3rd (7B) @ 6:15 pm</a>
+                <a id="event_5" onclick="show_spots(event)">Dec 3rd (H) @ 7:15 pm</a>
 
-                <a>Dec 5th (6A) @ 5:15 pm</a>
-                <a>Dec 5th (6B) @ 6:15 pm</a>
-                <a>Dec 5th (8) @ 7:15 pm</a>
+                <a id="event_6" onclick="show_spots(event)">Dec 5th (6A) @ 5:15 pm</a>
+                <a id="event_7" onclick="show_spots(event)">Dec 5th (6B) @ 6:15 pm</a>
+                <a id="event_8" onclick="show_spots(event)">Dec 5th (8) @ 7:15 pm</a>
 
                 <div class="event_section">Guitar</div>
-                <a>Dec 9th (6A) @ 5:15 pm</a>
-                <a> Dec 9th (7A) @ 6:15 pm</a>
-                <a> Dec 9th (8A) @ 8:15 pm</a>
+                <a id="event_9" onclick="show_spots(event)">Dec 9th (6A) @ 5:15 pm</a>
+                <a id="event_10" onclick="show_spots(event)"> Dec 9th (7A) @ 6:15 pm</a>
+                <a id="event_11" onclick="show_spots(event)"> Dec 9th (8A) @ 8:15 pm</a>
 
-                <a> Dec 10th (6B) @ 5:15 pm</a>
-                <a> Dec 10th (7B) @ 6:15 pm</a>
-                <a> Dec 10th (8B) @ 7:15 pm</a>
+                <a id="event_12" onclick="show_spots(event)"> Dec 10th (6B) @ 5:15 pm</a>
+                <a id="event_13" onclick="show_spots(event)"> Dec 10th (7B) @ 6:15 pm</a>
+                <a id="event_14" onclick="show_spots(event)"> Dec 10th (8B) @ 7:15 pm</a>
 
                 <div class="event_section">Chorus</div>
-                <a> Dec 12th (6B) @ 6:00</a>
-                <a> Dec 12th (6A) @ 7:00 pm</a>
+                <a id="event_15" onclick="show_spots(event)"> Dec 12th (6B) @ 6:00</a>
+                <a id="event_16" onclick="show_spots(event)"> Dec 12th (6A) @ 7:00 pm</a>
 
-                <a> Dec 16th (7/8 Mix) @ 6:00 pm</a>
-                <a> Dec 16th (7/8 Treble) @ 7:00 pm</a>
+                <a id="event_17" onclick="show_spots(event)"> Dec 16th (7/8 Mix) @ 6:00 pm</a>
+                <a id="event_18" onclick="show_spots(event)"> Dec 16th (7/8 Treble) @ 7:00 pm</a>
                 
             </div></td>
             <td width="99%">
@@ -852,13 +845,21 @@
                     spots for auction.
                     </h4>
                 </div>
-                <div class="bid_wrapper" style="display: none;">
+                <div id="bid_loading" class="bid_wrapper" style="display: none; height: 500px; padding:30px;">
+                    <h4 class="font_4" style="color:#444; font-size: 24px;">
+                    Loading...
+                    </h4>
+                </div>
+                <div id="bid_wrapper" class="bid_wrapper" style="display: none;">
 
-                  <h2><span><span class="color_23">Parking Spot 1</span></span></h2>
-                  <div>Current High Bid: <span id="spot1_high_bid" style="font-weight: bold;"></span></div>
+                  <h2><span><span class="color_23" style="color: #3273bb;">Parking Spot 1</span></span></h2>
+                  <div style="font-weight: bold;">Current High Bid: $<span id="spot1_high_bid" style="font-weight: bold;"></span></div>
                   <div style="margin-top: 20px;"></div>
                   <div>
                     <form id="spot1_form" onsubmit="return false;">
+                      <input type="hidden" name="spot" value="1" />
+                      <input id="spot1_input_event" type="hidden" name="event" value="" />
+                      <input id="spot1_input_event_id" type="hidden" name="event_id" value="" />
                       <div id="spot1_error" style='display: none; background: #FFBBBB; border: 1px solid #FF4444; padding: 3px; color: red; margin-bottom: 5px; font-size: 12px; font-weight: bold;'></div>
                       <table style="width: 100%" id="spot2">
                       <tbody><tr><td class="bid_label">Your Bid:</td><td><input class="bid_input" name="amount" type="number" step="1" min="1" max="10000"></td></tr>
@@ -870,11 +871,15 @@
                       </tbody></table>
                     </form>
                   </div>
-                  <h2><span><span class="color_23">Parking Spot 2</span></span></h2>
-                  <div>Current High Bid: <span id="spot2_high_bid" style="font-weight: bold;"></span></div>
+                  <br><br>
+                  <h2><span><span class="color_23" style="color:#3273bb;">Parking Spot 2</span></span></h2>
+                  <div style="font-weight: bold;">Current High Bid: $<span id="spot2_high_bid" style="font-weight: bold;"></span></div>
                   <div style="margin-top: 20px;"></div>
                   <div>
                     <form id="spot2_form" onsubmit="return false;">
+                      <input type="hidden" name="spot" value="2" />
+                      <input id="spot2_input_event" type="hidden" name="event" value="" />
+                      <input id="spot2_input_event_id" type="hidden" name="event_id" value="" />
                       <div id="spot2_error" style='display: none; background: #FFBBBB; border: 1px solid #FF4444; padding: 3px; color: red; margin-bottom: 5px; font-size: 12px; font-weight: bold;'></div>
                       <table style="width: 100%" id="spot2">
                       <tbody><tr><td class="bid_label">Your Bid:</td><td><input class="bid_input" name="amount" type="number" step="1" min="1" max="10000"></td></tr>
