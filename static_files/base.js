@@ -18,6 +18,12 @@ function show_spots(evt){
     var target = evt.target;
     var name = $(target).text();
     var event_id = $(target).attr('id');
+    var event_date_string = $(target).attr('data-date');
+    var event_date = new Date(event_date_string);
+    console.log('event date: ', event_date);
+    var offset = 2;  // days
+    var check_date = new Date();
+    check_date.setDate(check_date.getDate() + offset)
     $('#spot1_input_event').val(name);
     $('#spot2_input_event').val(name);
     $('#spot1_input_event_id').val(event_id);
@@ -25,6 +31,12 @@ function show_spots(evt){
 
     $('#bid_welcome').hide();
     $('#bid_wrapper').hide();
+    $('#bid_closed').hide();
+    if (check_date > event_date) {
+        console.log('bidding is closed');
+        $('#bid_closed').show();
+        return;
+    }
     $('#bid_loading').show();
     $('#event_menu').find('a').removeClass('selected');
     $(target).addClass('selected');

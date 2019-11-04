@@ -836,7 +836,7 @@ support!
             <div id="event_menu">
                 
                 <div class="event_section">Band</div>
-                <a id="event_19" onclick="show_spots(event)">Oct 29th (7A/8A) @ 6:30 pm</a>
+                <a id="event_19" data-date="10/29/2019" onclick="show_spots(event)">Oct 29th (7A/8A) @ 6:30 pm</a>
                 <a id="event_1"  onclick="show_spots(event)">Nov 14th (7B/8B) @ 6:30 pm</a>
                 <a id="event_2"  onclick="show_spots(event)">Nov 18th (6A/6B) @ 6:30 pm</a>
 
@@ -871,6 +871,11 @@ support!
                     <h4 class="font_4" style="color:#444; font-size: 24px;">
                     Please select an event to the left in order to view available parking 
                     spots for auction.
+                    </h4>
+                </div>
+                <div id="bid_closed" style="display: none; height: 500px; padding:30px;">
+                    <h4 class="font_4"  style="color: #993333; font-size: 24px;">
+                    Bidding for this event has closed.
                     </h4>
                 </div>
                 <div id="bid_loading" class="bid_wrapper" style="display: none; height: 500px; padding:30px;">
