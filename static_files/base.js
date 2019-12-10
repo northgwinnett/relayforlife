@@ -33,7 +33,6 @@ function show_spots(evt){
     $('#bid_wrapper').hide();
     $('#bid_closed').hide();
 
-    $('#bid_loading').show();
     $('#event_menu').find('a').removeClass('selected');
     $(target).addClass('selected');
     
@@ -42,6 +41,8 @@ function show_spots(evt){
         $('#bid_closed').show();
         return;
     }
+    
+    $('#bid_loading').show();
 
     if (topbids_xhr && topbids_xhr.abort) {
         topbids_xhr.abort();
