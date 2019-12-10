@@ -32,14 +32,16 @@ function show_spots(evt){
     $('#bid_welcome').hide();
     $('#bid_wrapper').hide();
     $('#bid_closed').hide();
+
+    $('#bid_loading').show();
+    $('#event_menu').find('a').removeClass('selected');
+    $(target).addClass('selected');
+    
     if (check_date > event_date || true) {
         console.log('bidding is closed');
         $('#bid_closed').show();
         return;
     }
-    $('#bid_loading').show();
-    $('#event_menu').find('a').removeClass('selected');
-    $(target).addClass('selected');
 
     if (topbids_xhr && topbids_xhr.abort) {
         topbids_xhr.abort();
