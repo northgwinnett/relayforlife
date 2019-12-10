@@ -32,7 +32,7 @@ function show_spots(evt){
     $('#bid_welcome').hide();
     $('#bid_wrapper').hide();
     $('#bid_closed').hide();
-    if (check_date > event_date) {
+    if (check_date > event_date || true) {
         console.log('bidding is closed');
         $('#bid_closed').show();
         return;
