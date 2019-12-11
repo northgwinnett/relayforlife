@@ -36,7 +36,7 @@ function show_spots(evt){
     $('#event_menu').find('a').removeClass('selected');
     $(target).addClass('selected');
     
-    if (check_date > event_date || true) {
+    if (check_date > event_date) {
         console.log('bidding is closed');
         $('#bid_closed').show();
         return;
